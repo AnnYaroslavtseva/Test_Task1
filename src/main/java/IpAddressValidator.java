@@ -4,12 +4,12 @@ import java.util.regex.Pattern;
 
 
 public class IpAddressValidator {
-    private IpAdressGenerator ipAdressGenerator;
+    private IpAddressGenerator ipAddressGenerator;
 
 
 
     public void inputIPRange(){
-        ipAdressGenerator = new IpAdressGenerator();
+        ipAddressGenerator = new IpAddressGenerator();
         System.out.println("Введите диапазон ip:");
         Scanner scan = new Scanner(System.in);
         String ipAddressInput = scan.nextLine();
@@ -18,7 +18,7 @@ public class IpAddressValidator {
             System.out.println("Недопустимое значение IP");
         }
         else{
-            ipAdressGenerator.generate(ipAddressInput,ipAddressInput2);
+            ipAddressGenerator.generate(ipAddressInput,ipAddressInput2);
 
 
         }
