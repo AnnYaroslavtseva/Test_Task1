@@ -16,37 +16,17 @@ public class IpAddressGenerator {
              mass1Int.add(Integer.parseInt(ipMass1[i]));//создаем массив чисел из строки
             mass2Int.add(Integer.parseInt(ipMass2[i]));
         }
-        int a;
-        int b;
-        String ip = null;
-
-        for (int i = 3; i > 0; i--){
-            a = mass1Int.get(i);
-            b = mass2Int.get(i);
-
-            for (int j = a+1; j < b; j++) {
-            //while (a < b){
-                //a++;
 
 
-
-                switch (i){
-
-
-                case 0: ip = j+"."+ mass1Int.get(1)+"."+ mass1Int.get(2)+"."+mass1Int.get(3);
-                    break;
-
-                case 1: ip = mass1Int.get(0)+"."+ j+"."+ mass1Int.get(2)+"."+mass1Int.get(3);
-                    break;
-
-                case 2: ip = mass1Int.get(0)+"."+ mass1Int.get(1)+"."+ j+"."+mass1Int.get(3);
-                    break;
-
-                case 3: ip = mass1Int.get(0)+"."+ mass1Int.get(1)+"."+ mass1Int.get(2)+"."+j;
-                    break;
-
+        for (int i =  mass1Int.get(0); i <= mass2Int.get(0); i++) {
+            for (int j = mass1Int.get(1); j <= mass2Int.get(1); j++) {
+                for (int k = mass1Int.get(2); k <= mass2Int.get(2); k++) {
+                    for (int n = mass1Int.get(3); n <= mass2Int.get(3); n++) {
+                        System.out.println(i + "." + j + "." + k + "." +n);
+                    }
+                }
             }
-            System.out.println(ip);
+        }
 
 
             }
@@ -57,21 +37,3 @@ public class IpAddressGenerator {
 
 
 
-        /*StringBuffer stringBuffer = new StringBuffer();
-        int j;
-        int j1;
-        for (int i = 3; i > 0; i--) {
-            j = mass1Int.get(i);
-            j1 = mass2Int.get(i);
-            while ( j  <=  j1)  {
-                j++;
-                stringBuffer.append(j+".");
-
-
-            }
-            System.out.println(stringBuffer);
-            stringBuffer.setLength(0);
-        }*/
-
-    }
-}
