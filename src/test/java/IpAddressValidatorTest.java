@@ -50,9 +50,12 @@ public class IpAddressValidatorTest {
     public void validateTest() {
 
         IpAddressValidator validator = new IpAddressValidator();
+        System.out.println("Начало теста");
 
 
         validator.validate(ipTest1, ipTest2);
+        System.out.println("Конец теста");
+
 
     }
 }
